@@ -33,7 +33,7 @@ result_correst_3comp = array(0, dim = c(nrep,2,3,3),
                                   dimnames = list(NULL, method = c('group NGCA', 'group ICA'), 
                                                   SVAR = c('high SVAR', 'medium SVAR', 'low SVAR'),
                                                   Comp = c('Comp 1', 'Comp 2', 'Comp 3')))
-result = foreach(j = 1:nrep) %doapr% {
+result = foreach(j = 1:nrep) %dopar% {
   run_comp_est_OneRep(nsub = nsub, gamma.rate = gamma.rate, gamma.shape = gamma.shape, FWHM = FWHM, seed = j, 
                       n.individual.NGCA = result_dimest_0715[j,,,1], n.group=3) # use 3 group components 
 }
