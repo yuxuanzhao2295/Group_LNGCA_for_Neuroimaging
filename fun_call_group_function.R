@@ -1,4 +1,4 @@
-group_NGCA = function(data.list, n.individual, n.group,
+group_LNGCA = function(data.list, n.individual, n.group,
                       whiten = "eigenvec", restarts.pbyd = 0,  restarts.dbyd = 30, distribution='logistic',
                       parallel = FALSE){
   nsub = length(data.list)
