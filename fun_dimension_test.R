@@ -68,7 +68,7 @@ BIsearch_test <- function(xData, alpha = 0.05, fun, k.start=NULL, pval.start=NUL
   return(list(dim_est=k0, step_search=Res_search))
 }
 
-KurtSimTest<- function(X=NULL, k, noise.dim = c(33,33), FWHM, n_sim=200, parallel = FALSE){
+FOBI_GRF_test <- function(X=NULL, k, noise.dim = c(33,33), FWHM, n_sim=200, parallel = FALSE){
   # NULL H_0: the dimension of non-gaussian subspace is at most k
   # if p.val small, reject null, as least k+1
   # if p.val large, accept null, true k_0 <= k
