@@ -44,7 +44,7 @@ run_comp_est_OneSVAR = function(SVAR.setting, n.individual.NGCA = rep(15, nsub),
   }
   
   # group NGCA
-  est_group_NGCA = group_NGCA(simData, n.individual = n.individual.NGCA, n.group = n.group, parallel = parallel_NGCA)
+  est_group_NGCA = group_LNGCA(simData, n.individual = n.individual.NGCA, n.group = n.group, parallel = parallel_NGCA)
   comp.ngca = order.likelihood(est_group_NGCA$S, distribution = 'logistic')$S
   #temp <- matchICA(S = est_group_NGCA$S, template = simData[[1]]$S[,1:3])
   cor.est[,,1] = cor(comp.ngca, simData[[1]]$S[,1:3], method = "pearson")
