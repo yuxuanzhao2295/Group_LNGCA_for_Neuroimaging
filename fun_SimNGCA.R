@@ -1,6 +1,7 @@
+# generate the simulation data for a single subject
 SimFMRI.ngca = function(snr, gamma.rate, gamma.shape,
                         FWHM = 9,
-                        noisyICA=FALSE, nNG=25, nTR=50, phi=0.37, dim.data=c(33,33), var.inactive=0.1) {
+                        noisyICA=FALSE, nNG=25, nTR=50, phi=0.37, dim.data=c(33,33), var.inactive=0.001) {
   if (snr == 'high'){
     snr.ratio = c(0.335, 0.299, 0.366)
   } 
